@@ -1,22 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
 </head>
-<body style="background-color:rgb(196, 221, 241);">
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<style>
+    body {
+    background-image: url('images/whale.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    a:link, a:visited {
+      color: rgb(90, 130, 105);
+      padding: 15px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    a:hover, a:active {
+      background-color: rgb(182, 233, 235);
+    }
+    
+    .center-container {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        }
+   
 
-<h1 style="background-color:rgb(142, 205, 226);color:rgb(8, 8, 69);font-family:verdana;font-size:300%;">This is Heading</h1>
-<p style="background-color:rgb(158, 210, 228);color:rgb(9, 9, 84);font-family:verdana;font-size:160%;">This is a paragraph.</p>
+    h1 {
+        font-size: 3rem;
+        color: white;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+    p {
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    color: darkgreen;
+    line-height: 1.6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 60%; 
+    margin: 0 auto; 
+    text-align: center; 
+}
 
-<b style="background-color:rgb(158, 210, 228);color:rgb(9, 9, 84);">This text is bold</b><br><br>
-<strong style="background-color:rgb(142, 205, 226);color:rgb(8, 8, 69);font-family:verdana;">This text is important!</strong><br><br>
-<i style="background-color:rgb(158, 210, 228);color:rgb(9, 9, 84);font-family:verdana;">This text is italic</i><br><br>
-<em style="background-color:rgb(142, 205, 226);color:rgb(8, 8, 69);font-family:verdana;">This text is emphasized</em><br><br>
-<small style="background-color:rgb(158, 210, 228);color:rgb(9, 9, 84);font-family:verdana;">This is some smaller text.</small><br><br>
-<p>Do not forget to buy <mark>milk</mark> today.</p>
-<p>My favorite color is <del>pink</del> blue.</p>
-<p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
-<p>This is <sup>superscripted</sup> text.</p>
+
+</style>
+<table width="100%" bgcolor="white" >
+    <tr height="70">
+        <td align="center">
+            <a href="index.html" style="font-size: 50px; text-decoration: none;">
+                <font size="6">Home</font> &#128011;
+            </a>
+        </td>        
+        
+        <!-- About with Collapsible Links -->
+        <td align="center">
+            <details>
+                <summary style="color: rgb(90, 130, 105);"><font size="6";>Tutorials</font></summary>
+                <ul>
+                    <a href="attributes.html"><font size="5">Attributes</font>
+                    <a href="basics.html"><font size="5">Basics</font></a>
+                    <a href="blocks&inline.html"><font size="5">Blocks & Inline</font></a>
+                    <a href="classes.html"><font size="5">Classes</font></a>
+                    <a href="formatting.html"><font size="5">Formating</font></a>
+                    <a href="images.html"><font size="5">Images</font></a>
+                    <a href="links.html"><font size="5">Links</font></a>
+                    <a href="lists.html"><font size="5">Lists</font></a>
+                    <a href="quotations.html"><font size="5">Quotations</font></a>
+                    <a href="tables.html"><font size="5">Tables</font></a>
+                </ul>
+            </details>
+        </td>
+
+        <td align="center"><a href="exploration.html"><font size="6">Exploration</font></a></td>
+        <td align="center"><a href="studywhales.html"><font size="6">Study Whales</font></a></td>
+    </tr>
+</table>
+<!-- Centered Heading -->
+<div class="center-container">
+    <h1>Welcome to the World of Whales!</h1>
+</div>
+<p>
+    Dive into the fascinating world of whales, the gentle giants of the ocean. From the majestic blue whale—the largest animal on Earth—to the playful and intelligent orca, these magnificent creatures inspire wonder and curiosity. Explore their unique behaviors, incredible communication skills, and vital role in marine ecosystems. Learn about the challenges they face, from climate change to ocean pollution, and discover how you can help protect them. Whether you're a marine enthusiast, student, or conservationist, this site is your gateway to understanding and appreciating whales. Join us on this journey to celebrate and safeguard these extraordinary beings!
+</p>
+
+
+
+
+
 
 </body>
 </html>

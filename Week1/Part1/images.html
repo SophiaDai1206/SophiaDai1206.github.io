@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    body {
+    background-image: url('images/background.avif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+</style>
+<a href="index.html" style="font-size: 100px; text-decoration: none;">&#128011;</a>
+
+<h2>HTML Image</h2>
+<img src="images/whale.jpeg" alt="WHALE" width="500" height="333">
+<img src="images/whale2.jpg" alt="WHALE" width="500" height="333">
+<img src="images/whale3.jpg" alt="WHALE" width="500" height="333">
+<h2>Images on Another Server/Website</h2>
+<p><img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com"></p>
+<h2>Animated Images</h2>
+
+<p>HTML allows moving images:</p>
+<img src="images/programming.gif" alt="Computer man" style="width:48px;height:48px;">
+
+<h2>Floating Images</h2>
+<p><strong>Float the image to the right:</strong></p>
+
+<p>
+<img src="images/smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.
+</p>
+
+<p><strong>Float the image to the left:</strong></p>
+<p>
+<img src="images/smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
+</p>
+
+<h2>Image Maps</h2>
+<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+<img src="images/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="formatting.html">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="attributes.html">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="links.html" onclick="myFunction()">
+</map>
+  
+  <script>
+  function myFunction() {
+    alert("You clicked the coffee cup!");
+  }
+  </script>
+<h2>The picture Element</h2>
+
+<picture>
+    <img src="images/whale.jpeg" alt="WHALE" style="width:auto;">
+    <img src="images/whale2.jpg" alt="WHALE" style="width:auto;">
+    <img src="images/whale3.jpg" alt="WHALE" style="width:auto;">
+</picture>
+
+</body>
+</html>
