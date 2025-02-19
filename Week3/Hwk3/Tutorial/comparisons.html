@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Comparison</h1>
+<h2>The == Operator</h2>
+
+<p>Assign 5 to x, and display the value of the comparison (x == 5):</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 5;
+document.getElementById("demo").innerHTML = (x == 5);
+</script>
+
+<h2>The === Operator</h2>
+
+<p>Assign 5 to x, and display the value of the comparison (x === "5").</p>
+
+<p id="demo2"></p>
+
+<script>
+let x2 = 5;
+document.getElementById("demo2").innerHTML = (x2 === "5");
+</script>
+
+<p>Assign 5 to x, and display the value of the comparison (x === 5):</p>
+
+<p id="demo3"></p>
+
+<script>
+let x3 = 5;
+document.getElementById("demo3").innerHTML = (x3 === 5);
+</script>
+
+<h2>The >= Operator</h2>
+
+<p>Assign 5 to x, and display the value of the comparison (x >= 8).</p>
+
+<p id="demo4"></p>
+
+<script>
+let x4 = 5;
+document.getElementById("demo4").innerHTML = (x4 >= 8);
+</script>
+
+<p>Assign 5 to x, and display the value of the comparison (x > 8).</p>
+ 
+<p id="demo6"></p>
+
+<script>
+let x6 = 5;
+document.getElementById("demo6").innerHTML = (x6 > 8);
+</script>
+
+<h2>The () ? : Ternary Operator</h2>
+
+<p>Input your age and click the button:</p>
+
+<input id="age" value="18" />
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo7"></p>
+
+<script>
+function myFunction() {
+  let age = document.getElementById("age").value;
+  let voteable = (age < 18) ? "Too young":"Old enough";
+  document.getElementById("demo7").innerHTML = voteable + " to vote.";
+}
+</script>
+
+<p>Input your age and click the button:</p>
+
+<input id="age2" value="18" />
+
+<button onclick="myFunction2()">Try it</button>
+
+<p id="demo8"></p>
+
+<script>
+function myFunction2() {
+  let voteable;
+  let age = Number(document.getElementById("age2").value);
+  if (isNaN(age)) {
+    voteable = "Input is not a number";
+  } else {
+    voteable = (age < 18) ? "Too young" : "Old enough";
+  }
+  document.getElementById("demo8").innerHTML = voteable + " to vote";
+}
+</script>
+
+<h2>The ?. Operator</h2>
+<p>The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).</p>
+
+<p>Car name is:</p>
+<p id="demo9"></p>
+
+<script>
+const car = {type:"Fiat", model:"500", color:"white"};
+let name = car?.name;
+document.getElementById("demo9").innerHTML = name;
+</script>
+
+
+
+</body>
+</html>

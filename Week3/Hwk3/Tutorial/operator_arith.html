@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript String Operators</h1>
+<h2>The + Operator</h2>
+<p>Adding a number and a string, returns a string.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 5 + 5;
+let y = "5" + 5;
+let z = "Hello" + 5;
+document.getElementById("demo").innerHTML =
+x + "<br>" + y + "<br>" + z;
+</script>
+<h2>The += Operator</h2>
+<p>The assignment operator += can concatenate strings.</p>
+
+<p id="demo2"></p>
+
+<script>
+let text1 = "What a very ";
+text1 += "nice day";
+document.getElementById("demo2").innerHTML = text1;
+</script>
+
+
+<h1>JavaScript Arithmetic</h1>
+<h2>The *,/,+,- Operator</h2>
+
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<script>
+let x1 = 5;
+let y1 = 2; // Fixed variable name
+
+let z1 = x1 * y1;
+let z2 = x1 / y1; // Fixed variable reference
+let z3 = x1 + y1;
+let z4 = x1 - y1;
+let z5 = x1 % y1;
+x1--;
+let z7 = x1;
+
+document.getElementById("demo3").innerHTML = "Multiplication: " + z1;
+document.getElementById("demo4").innerHTML = "Division: " + z2;
+document.getElementById("demo5").innerHTML = "Addition: " + z3;
+document.getElementById("demo6").innerHTML = "Subtraction: " + z4;
+document.getElementById("demo7").innerHTML = "Reminder: " + z5;
+document.getElementById("demo7").innerHTML = "Decrement: " + z7;
+</script>
+
+
+
+
+
+</body>
+</html>

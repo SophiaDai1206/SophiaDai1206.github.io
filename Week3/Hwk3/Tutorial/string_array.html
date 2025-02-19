@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+
+<p>The escape sequence \" inserts a double quote in a string.</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "We are the so-called \"Vikings\" from the north.";
+document.getElementById("demo").innerHTML = text; 
+</script>
+
+
+<p>The escape sequence \\ inserts a backslash in a string.</p>
+
+<p id="demo2"></p>
+
+<script>
+let text2 = "The character \\ is called backslash.";
+document.getElementById("demo2").innerHTML = text; 
+</script>
+
+<p>The safest way to break a code line in a string is using string addition.</p>
+
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML = "Hello " +
+"Dolly!";
+</script>
+<h1>JavaScript Arrays</h1>
+
+<p id="array"></p>
+
+<script>
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("array").innerHTML = cars;
+</script>
+
+<p id="array2"></p>
+
+<script>
+const cars2 = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+document.getElementById("array2").innerHTML = cars2;
+</script>
+
+<h2>Looping an Array</h2>
+
+<p id="demo11"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits.length;
+
+let text3 = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  text3 += "<li>" + fruits[i] + "</li>";
+}
+text3 += "</ul>";
+
+document.getElementById("demo11").innerHTML = text3;
+</script>
+
+</body>
+</html>

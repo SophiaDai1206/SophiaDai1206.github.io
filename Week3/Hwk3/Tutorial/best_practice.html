@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Variables</h2>
+
+<p>A variable can chang its type. In this example x is first a string then a number:</p>
+
+<p id="demo"></p>
+
+<script>
+let x = "Hello";
+x = 5;
+document.getElementById("demo").innerHTML = typeof x;
+</script>
+
+<p>Remove the comment (at the beginning of the lines) to test each case:</p>
+
+<p id="demo2"></p>
+
+<script>
+let x2 = 5;
+//x = 5 + 7;    // x.valueOf() is 12, typeof x is a number
+x2 = 5 + "7";  // x.valueOf() is 57, typeof x is a string
+//x = "5" + 7;  // x.valueOf() is 57, typeof x is a string
+//x = 5 - 7;    // x.valueOf() is -2, typeof x is a number
+//x = 5 - "7";  // x.valueOf() is -2, typeof x is a number
+//x = "5" - 7;  // x.valueOf() is -2, typeof x is a number
+//x = 5 - "x";  // x.valueOf() is NaN, typeof x is a number
+
+document.getElementById("demo2").innerHTML = x2.valueOf() + " " + typeof x2;
+</script>
+
+<h2>JavaScript String Objects</h2>
+<p>Never create strings as objects.</p>
+<p>Strings and objects cannot be safely compared.</p>
+
+<p id="demo3"></p>
+
+<script>
+let x3 = "John";        // x is a string
+let y = new String("John");  // y is an object
+document.getElementById("demo3").innerHTML = (x3 === y);
+</script>
+
+</body>
+</html>
+

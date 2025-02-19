@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Creative Hw Week2</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link id="background-mode" rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+<header>
+  <div class="header-image">
+    <!-- Slideshow container -->
+    <div class="slideshow-container" id = "slidesContainer">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <script>
+        let slideNum =4;
+        let slidesContainer = document.getElementById("slidesContainer");
+        let slidesData = [
+            { number: "1 / 4", imgSrc: "Images/ocean-waves.jpeg", caption: "Oceans" },
+            { number: "2 / 4", imgSrc: "Images/desert.jpeg", caption: "Deserts" },
+            { number: "3 / 4", imgSrc: "Images/forest.jpeg", caption: "Forests" },
+            { number: "4 / 4", imgSrc: "Images/city.jpeg", caption: "Cities" }
+    ];
+        slidesData.forEach(myFunction);
+        function myFunction(slide) {
+            let slideDiv = document.createElement("div");
+            slideDiv.className = "mySlides fade";
+            slideDiv.innerHTML = `
+                <div class="numbertext">${slide.number}</div>
+                <img src="${slide.imgSrc}" style="width:100%">
+                <div class="text">${slide.caption}</div>
+            `;
+            slidesContainer.appendChild(slideDiv);
+        }   
+    </script>
+
+    <br>
+      
+    <!-- The dots/circles -->
+    <div style="text-align:center" id="dotsContainer"></div>
+    <script>
+        let totalSlide = 4;
+        dotsContainer = document.getElementById("dotsContainer");
+        for (let j = 1; j <= totalSlide; j++){
+            let span = document.createElement("span");
+            span.className = "dot";
+            span.onclick = function() { currentSlide(j); }; // Assign function directly
+            dotsContainer.appendChild(span);
+        }
+    </script>
+    
+      <!-- <img src="Images/portal_logo.png" alt="Logo" style="height:95px" > -->
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+  </div>
+  <div class="header-text">
+    <h2>Travel With Me</h2>
+  </div>
+</header>
+
+<section>
+    <nav>
+        <a href="nyc.html"><img src="Images/image2.jpeg" alt="Link 2"></a>
+        <a href="nyc.html"><img src="Images/image3.jpeg" alt="NYC"></a>
+        <a href="geneva.html"><img src="Images/image4.jpeg" alt="Link 4"></a>
+        <a href="barcelona.html"><img src="Images/image5.jpeg" alt="Barcelona"></a>
+        <a href="paris.html"><img src="Images/image6.jpeg" alt="Link 6"></a>
+    </nav>
+  
+  <article>
+    <script>
+      function mode(sw) {
+        var look; 
+        if (sw == 0) {
+          look = "CSS/style.css"
+        } else {
+          look = "CSS/style2.css"
+        }
+        document.getElementById('background-mode').href = look;
+      }
+    </script>
+    <p style = "text-align: center; margin-top: -15px; ">
+      <button type="button" onclick="mode(1)" >Dark Mode</button>
+      <button type="button" onclick="mode(0)" >Light Mode</button>
+    </p>
+    
+    <h2>Welcome to Travel With Me – Your Gateway to the World's Most Iconic Cities!</h2>
+    <p>
+        Embark on a journey to explore some of the world's most breathtaking destinations. 
+        Whether you're strolling along the romantic streets of <strong>Paris</strong>, 
+        admiring the dazzling lights of <strong>New York City</strong>, soaking in the 
+        picturesque landscapes of <strong>Geneva</strong>, or embracing the vibrant culture 
+        of <strong>Barcelona</strong>, our travel guide has everything you need to make 
+        your trip unforgettable.
+    </p>
+    <p>
+        From must-visit landmarks and hidden gems to cultural experiences and local cuisines, 
+        we bring you insider tips to help you discover the heart and soul of each city. 
+        Let us inspire your next adventure and turn your travel dreams into reality! 🌍✈️
+    </p>
+  </article>
+
+</section>
+
+
+</body>
+</html>
+

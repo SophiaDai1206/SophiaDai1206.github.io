@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<h2>JavaScript For Loop</h2>
+
+<p id="demo2"></p>
+
+<script>
+let text2 = "";
+
+for (let i = 0; i < 5; i++) {
+  text2 += "The number is " + i + "<br>";
+}
+
+document.getElementById("demo2").innerHTML = text2;
+</script>
+
+<h2>JavaScript For In Loop</h2>
+<p>The for in statement loops through the properties of an object:</p>
+
+<p id="demo3"></p>
+
+<script>
+const person = {fname:"John", lname:"Doe", age:25}; 
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+
+document.getElementById("demo3").innerHTML = txt;
+</script>
+
+<h1>JavaScript Arrays</h1>
+<h2>The forEach() Method</h2>
+
+<p>Call a function once for each array element:</p>
+
+<p id="demo4"></p>
+
+<script>
+const numbers2 = [45, 4, 9, 16, 25];
+console.log(numbers2);
+let txt3 = "";
+numbers2.forEach(myFunction);
+document.getElementById("demo4").innerHTML = txt3;
+
+function myFunction(value) {
+  txt3 += value + "<br>"; 
+}
+</script>
+
+
+</body>
+</html>

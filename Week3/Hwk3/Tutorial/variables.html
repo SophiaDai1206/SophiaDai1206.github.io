@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Variables</h1>
+
+<p>In this example, x, y, and z are undeclared.</p>
+<p>They are automatically declared when first used.</p>
+
+<p id="demo"></p>
+
+<script>
+x = 5;
+y = 6;
+z = x + y;
+document.getElementById("demo").innerHTML =
+"The value of z is: " + z;
+</script>
+
+<p id="demo2"></p>
+
+<script>
+var x = 5;
+var y = 6;
+var z = x + y;
+document.getElementById("demo2").innerHTML =
+"The value of z is: " + z;
+</script>
+<p>In this example, price1, price2, and total are variables.</p>
+
+<p id="demo3"></p>
+
+<script>
+const price1 = 5;
+const price2 = 6;
+let total = price1 + price2;
+document.getElementById("demo3").innerHTML =
+"The total is: " + total;
+</script>
+
+<p>Strings are written with quotes.</p>
+<p>Numbers are written without quotes.</p>
+
+<p id="demo4"></p>
+
+<script>
+const pi = 3.14;
+let person = "John Doe";
+let answer = 'Yes I am!';
+
+document.getElementById("demo4").innerHTML =
+pi + "<br>" + person + "<br>" + answer;
+</script>
+
+<p>You can declare many variables in one statement.</p>
+
+<p id="demo6"></p>
+
+<script>
+let person1 = "John Doe", carName = "Volvo", price = 200;
+document.getElementById("demo6").innerHTML = carName;
+</script>
+
+
+</body>
+</html>

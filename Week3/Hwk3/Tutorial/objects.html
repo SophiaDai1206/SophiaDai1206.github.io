@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Variables</h1>
+<h2>Creating a Variable</h2>
+<p id="demo"></p>
+
+<script>
+// Create and a Variable:
+let car = "Fiat";
+document.getElementById("demo").innerHTML = "Car: " +  car;
+</script>
+
+<p id="demo2"></p>
+
+<script>
+// Create an Object:
+const car2 = {type:"Fiat", model:"500", color:"white"};
+
+// Display Data from the Object:
+document.getElementById("demo2").innerHTML =
+"The car type is " + car2.type;
+</script>
+
+<p id="demo3"></p>
+
+<script>
+// Create an Object:
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+// Display Data from the Object:
+document.getElementById("demo3").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+<h2>Using an Object Literal</h2>
+
+<p id="demo5"></p>
+
+<script>
+// Create an empty Object
+const person2 = {};
+
+// Add Properties
+person2.firstName = "John";
+person2.lastName = "Doe";
+person2.age = 50;
+person2.eyeColor = "blue"; 
+
+// Display Data from Object
+document.getElementById("demo5").innerHTML =
+person2.firstName + " is " + person2.age + " years old.";
+</script>
+
+<h2>Objects are Mutable</h2>
+
+<p>Changes to a copy of an object will also change the original object:</p>
+
+<p id="demo6"></p>
+
+<script>
+// Create an Object
+const person3 = {
+  firstName: "John",
+  lastName: "Doe",
+  age:50,
+  eyeColor: "blue"
+};
+
+// Create a Copy
+const x = person3;
+
+// Change Age
+x.age = 10;
+
+document.getElementById("demo6").innerHTML =
+person3.firstName + " is " + person3.age + " years old.";
+</script>
+
+<h2>Object Methods</h2>
+<p>A method is a function definition stored as a property value.</p>
+
+<p id="demo7"></p>
+
+<script>
+const person4 = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+document.getElementById("demo7").innerHTML = person4.fullName();
+</script>
+
+</body>
+</html>
