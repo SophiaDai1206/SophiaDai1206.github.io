@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link id="background-mode" rel="stylesheet" href="look1.css">
+</head>
+<body>
+
+<header>
+
+  <img src="Images/portal_logo.png" alt="Logo" style="height:95px" >
+</header>
+
+<section>
+    <nav>
+        <h3><a href="#">CSC252</a></h3>
+        <p>Fall 2020</p>
+        <p><a href="#">Ileana Streinu</a></p>
+        <hr></hr>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="#">Requirements</a></li>
+            <li><a href="#">Textbook</a></li>
+        </ul>
+        <hr></hr>
+        <ul>
+            <li><a href="#">HowTo</a></li>
+            <li><a href="#">Resources</a></li>
+        </ul>
+    </nav>
+  
+  <article>
+    <h1 style="font-size:40px;text-align:center; margin-top: -3px; ">252 Algorithms</h1>
+    <script>
+        function mode(sw) {
+          var look; 
+          if (sw == 0) {
+            look = "look1.css"
+          } else {
+            look = "look2.css"
+          }
+          document.getElementById('background-mode').href = look;
+        }
+    </script>
+    <p style = "text-align: center; margin-top: -15px; ">
+        <button type="button" onclick="mode(1)" >Dark Mode</button>
+        <button type="button" onclick="mode(0)" >Light Mode</button>
+    </p>
+    <table>
+        <tr>
+            <th>Week</th>
+            <th>Date</th>
+            <th>Lecture</th>
+            <th>Topic</th>
+            <th>Hwk</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Tu 9/1<br>Th 9/3</td>
+            <td><a href="#">Lectures 1+2</a></td>
+            <td>
+                Introduction.<br>
+                Case study: some basic linear time algorithms.<br>
+                Iterative vs. Recursive algorithms.<br>
+                Time and space complexity.
+            </td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Tu 9/8<br>Th 9/10</td>
+            <td>
+                <a href="#">Lecture 3</a><br>
+                <a href="#">Lecture 4</a>
+            </td>
+            <td>
+                <b>Algorithm analysis:</b><br>
+                Asymptotic analysis: Big Oh and orders of growth.<br>
+                Worst case, best case, average case analysis.
+            </td>
+            <td>
+                <a href="#">Ex 1</a><br>
+                <a href="#">Hw 1</a>
+            </td>
+        </tr>
+    </table>
+    
+      
+</section>
+
+
+</body>
+</html>
+

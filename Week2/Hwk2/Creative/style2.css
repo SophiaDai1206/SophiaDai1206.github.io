@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    background-image: url('Images/ocean-waves.jpeg'); /* Replace with your image path */
+    background-size: cover; /* Makes sure the image covers the entire header */
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 20%;
+    height: 80vh;
+    background: #728085;
+    padding: 2px; 
+    overflow-y: auto;
+    font-size: larger;
+    border-right: 2px solid #333;
+    flex-direction: column;
+    gap: 10px;
+    }
+
+/* Image Styling */
+nav img {
+    width: 100%; /* Adjust width to fit the nav */
+    max-width: 200px; /* Prevents oversized images */
+    border-radius: 10px; /* Soft corners */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-right: -3px;
+    }
+
+/* Hover Effect */
+nav a:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+    opacity: 0.8; /* Slight fade */
+    }
+
+  
+  /* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+article {
+    float: left;
+    padding: 30px;
+    width: 75%;
+    background-color: #41434a; 
+    color: #cfeeed; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    height: auto; 
+    margin: 20px auto; 
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+/* Styling for Article Header */
+article h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #a9c4e0; /* Stylish deep blue */
+    margin-bottom: 15px;
+}
+
+/* Paragraph Styling */
+article p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
