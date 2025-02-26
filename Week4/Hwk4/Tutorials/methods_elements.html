@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Page</h2>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";
+</script>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Class Name.</p>
+<p class="intro">Hello World!</p>
+<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+<p id="demo2"></p>
+
+<script>
+const x = document.getElementsByClassName("intro");
+document.getElementById("demo2").innerHTML = 
+'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+</script>
+
+<p>Finding HTML Elements by Query Selector</p>
+<p class="intro">Hello World!.</p>
+<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+<p id="demo2"></p>
+
+<script>
+const x1 = document.querySelectorAll("p.intro");
+document.getElementById("demo2").innerHTML = 
+'The first paragraph (index 0) with class="intro" is: ' + x1[0].innerHTML;
+</script>
+
+
+<p>Finding HTML Elements Using <b>document.forms</b>.</p>
+
+<form id="frm1" action="/action_page.php">
+  First name: <input type="text" name="fname" value="Donald"><br>
+  Last name: <input type="text" name="lname" value="Duck"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>These are the values of each element in the form:</p>
+
+<p id="demo3"></p>
+
+<script>
+const x2 = document.forms["frm1"];
+let text = "";
+for (let i = 0; i < x2.length ;i++) {
+  text += x2.elements[i].value + "<br>";
+}
+document.getElementById("demo3").innerHTML = text;
+</script>
+
+
+</body>
+</html>

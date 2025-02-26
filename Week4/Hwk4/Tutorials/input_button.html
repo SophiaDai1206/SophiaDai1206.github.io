@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>A demonstration of how to access an Input Button</h3>
+
+<p>Click the button to get the text that is displayed on the button.</p>
+
+<input type="button" id="myBtn" onclick="myFunction()" value="Try it">
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myBtn").value;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+<p>Click the button to create an Input Button with a "Click me" text.</p>
+
+<button onclick="myFunction1()">Try it</button>
+
+<script>
+function myFunction1() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "button");
+  x.setAttribute("value", "Click me");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create a Checkbox.</p>
+
+<button onclick="myFunction2()">Try it</button>
+
+<script>
+function myFunction2() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "checkbox");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create a Color picker.</p>
+
+<button onclick="myFunction3()">Try it</button>
+
+<script>
+function myFunction3() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "color");
+  document.body.appendChild(x);
+}
+</script>
+
+
+<p>Click the button to create a Date field.</p>
+
+<button onclick="myFunction4()">Try it</button>
+
+<script>
+function myFunction4() {
+  const x = document.createElement("INPUT");
+  x.setAttribute("type", "date");
+  x.setAttribute("value", "2014-02-09");
+  document.body.appendChild(x);
+}
+</script>
+
+
+<p>Click the button to create a Datetime field.</p>
+
+<button onclick="myFunction5()">Try it</button>
+
+<script>
+function myFunction5() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "datetime");
+  x.setAttribute("value", "2000-01-01T08:32Z");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create a Local Datetime field.</p>
+
+<button onclick="myFunction6()">Try it</button>
+
+<script>
+function myFunction6() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "datetime-local");
+  document.body.appendChild(x);
+}
+</script>
+
+
+<p>Click the button to create an Email field.</p>
+​
+<button onclick="myFunction7()">Try it</button>
+​
+<script>
+function myFunction7() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "email");
+  x.setAttribute("value", "john@example.com");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create a File Upload Button.</p>
+
+<button onclick="myFunction8()">Try it</button>
+
+<script>
+function myFunction8() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "file");
+  document.body.appendChild(x);
+}
+</script>
+
+
+
+<h3>A demonstration of how to access a Hidden Input Field</h3>
+
+<input type="hidden" id="myInput" value="W3Schools">
+
+<p>Click the button to get the value of the hidden input field.</p>
+
+<button onclick="myFunction9()">Try it</button>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction9() {
+  var x = document.getElementById("myInput").value;
+  document.getElementById("demo2").innerHTML = x;
+}
+</script>
+
+
+<p>Click the button to create a Month field.</p>
+
+<button onclick="myFunction10()">Try it</button>
+
+<script>
+function myFunction10() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "month");
+  x.setAttribute("value", "2014-01");
+  document.body.appendChild(x);
+}
+</script>
+
+
+<p>Click the button to create a Number field.</p>
+
+<button onclick="myFunction11()">Try it</button>
+
+<script>
+function myFunction11() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "number");
+  x.setAttribute("value", "12345");
+  document.body.appendChild(x);
+}
+</script>
+
+
+<p>Click the button to create a Password Field.</p>
+
+<button onclick="myFunction12()">Try it</button>
+
+<script>
+function myFunction12() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "password");
+  x.setAttribute("value", "pswtext");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create a Radio Button.</p>
+
+<button onclick="myFunction14()">Try it</button>
+
+<script>
+function myFunction14() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "radio");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create a Slider Control.</p>
+
+<button onclick="myFunction15()">Try it</button>
+
+<script>
+function myFunction15() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "range");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create a Reset Button.</p>
+
+<button onclick="myFunction16()">Try it</button>
+
+<script>
+function myFunction16() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "reset");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create a Search field.</p>
+
+<button onclick="myFunction17()">Try it</button>
+
+<script>
+function myFunction17() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "search");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create a Submit Button.</p>
+
+<button onclick="myFunction18()">Try it</button>
+
+<script>
+function myFunction18() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "submit");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create a Text Field.</p>
+
+<button onclick="myFunction19()">Try it</button>
+
+<script>
+function myFunction19() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "text");
+  x.setAttribute("value", "Hello World!");
+  document.body.appendChild(x);
+}
+</script>
+
+
+<p>Click the button to create a Time field.</p>
+
+<button onclick="myFunction20()">Try it</button>
+
+<script>
+function myFunction20() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "time");
+  x.setAttribute("value", "21:35:09");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create an URL field.</p>
+
+<button onclick="myFunction21()">Try it</button>
+
+<script>
+function myFunction21() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "url");
+  x.setAttribute("value", "http://www.google.com");
+  document.body.appendChild(x);
+}
+</script>
+
+<p>Click the button to create a Week field.</p>
+
+<button onclick="myFunction22()">Try it</button>
+
+<script>
+function myFunction22() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "week");
+  x.setAttribute("value", "2000-W35");
+  document.body.appendChild(x);
+}
+</script>
+
+</body>
+</html>
