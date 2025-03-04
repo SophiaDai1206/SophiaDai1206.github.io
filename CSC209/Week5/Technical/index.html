@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link rel="stylesheet" href="css/graphics.css">
+
+
+<div class="control-panel">
+    <p>Please input a number between 1 and 10:</p>
+    <input id="numb" type="number">
+    <button type="button" onclick="myFunction()">Generate</button>
+    <p id="demo"></p>
+    <select id="speedSelect">
+        <option value="slow">Slow</option>
+        <option value="medium">Medium</option>
+        <option value="fast">Fast</option>
+    </select>
+    <button onclick="myMove()">Move</button>
+    <button onclick="reset()">Reset</button>
+</div>
+<label> <input type="checkbox" id="traceCheckbox" onclick = "posTracking()"> Keep Trace, Click After You Move All Points </label>
+<div id="positionOutput"></div>
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid grey"></canvas>
+<script src="js/graphics.js"></script>
+
+</body>
+</html>
