@@ -13,6 +13,12 @@ function extractFolderNumber($fullPath) {
         return 0;
     }
 }
+
+function createCaptionFromFilename($filename) {
+    $nameWithoutExt = pathinfo($filename, PATHINFO_FILENAME);
+    $nameWithSpaces = str_replace(['-', '_'], ' ', $nameWithoutExt);
+    return ucwords($nameWithSpaces);
+}
 ?>
 
 </body>

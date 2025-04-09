@@ -42,7 +42,7 @@ $images = array_values($images);
         let slidesContainer = document.getElementById("slidesContainer");
         let slidesData = [
             <?php foreach ($images as $index => $image): 
-                $caption = ucwords(str_replace(['-', '_', '.jpg', '.png', '.jpeg', '.gif'], [' ', ' ', '', '', '', ''], $image));
+                $caption = createCaptionFromFilename($image);
                 $slideNum = ($index + 1) . " / " . count($images);
                 $imgSrc = "$imageFolder/$image";
             ?>

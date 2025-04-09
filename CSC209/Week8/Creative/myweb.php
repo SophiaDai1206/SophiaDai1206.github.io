@@ -2,10 +2,19 @@
 include("../php/myLib.php");
 
 $weekNr = extractFolderNumber("/Applications/MAMP/htdocs/CSC209/CSC209/Week8/Technical/slideshowL4.php"); 
-$imageFolder = "Images";
+
+$imageBaseDir = "Images";
+
+$folders = array_filter(glob($imageBaseDir . '/*'), 'is_dir');
+
+// Determine which folder to show based on user input (GET param)
+$selectedFolder = isset($_GET['folder']) ? $_GET['folder'] : basename($folders[0]); // default to first
+
+$imageFolderPath = "$imageBaseDir/$selectedFolder";
 $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
 
-$images = array_filter(scandir($imageFolder), function($file) use ($allowedExtensions) {
+// Get image list from selected folder
+$images = array_filter(scandir($imageFolderPath), function($file) use ($imageFolderPath, $allowedExtensions) {
     $ext = pathinfo($file, PATHINFO_EXTENSION);
     return in_array(strtolower($ext), $allowedExtensions);
 });
@@ -15,36 +24,50 @@ $images = array_values($images);
 <html>
 <head>
     <title>Week <?php echo $weekNr; ?> Work</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         header {
             background-color: #355b82;
-            float: right;
-            width: 80%;
             padding: 20px;
             text-align: center;
             font-size: 35px;
             color: white;
         }
+        select {
+            font-size: 16px;
+            padding: 5px;
+            margin: 15px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="slideshow-container" id="slidesContainer">
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <div style="text-align:center" id="dotsContainer"></div>
+        <h1>Week <?php echo $weekNr; ?>: <?php echo htmlspecialchars($selectedFolder); ?> Slideshow</h1>
+
+        <form method="GET" onchange="this.submit()">
+            <label for="folder">Choose a category:</label>
+            <select name="folder" id="folder">
+                <?php foreach ($folders as $folderPath): 
+                    $folderName = basename($folderPath);
+                    $isSelected = $folderName === $selectedFolder ? 'selected' : '';
+                ?>
+                    <option value="<?php echo $folderName; ?>" <?php echo $isSelected; ?>>
+                        <?php echo $folderName; ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </form>
     </header>
 
-    <h1>This is work for Week <?php echo $weekNr; ?></h1>
+    <div class="slideshow-container" id="slidesContainer"></div>
+    <div style="text-align:center" id="dotsContainer"></div>
 
     <script>
-        let slidesContainer = document.getElementById("slidesContainer");
-        let slidesData = [
+        const slidesData = [
             <?php foreach ($images as $index => $image): 
-                $caption = ucwords(str_replace(['-', '_', '.jpg', '.png', '.jpeg', '.gif'], [' ', ' ', '', '', '', ''], $image));
+                $caption = createCaptionFromFilename($image);
                 $slideNum = ($index + 1) . " / " . count($images);
-                $imgSrc = "$imageFolder/$image";
+                $imgSrc = "$imageFolderPath/$image";
             ?>
             {
                 number: "<?php echo $slideNum; ?>",
@@ -53,6 +76,9 @@ $images = array_values($images);
             }<?php echo $index < count($images) - 1 ? ',' : ''; ?>
             <?php endforeach; ?>
         ];
+
+        const slidesContainer = document.getElementById("slidesContainer");
+        const dotsContainer = document.getElementById("dotsContainer");
 
         slidesData.forEach(function(slide) {
             let slideDiv = document.createElement("div");
@@ -65,9 +91,7 @@ $images = array_values($images);
             slidesContainer.appendChild(slideDiv);
         });
 
-        let totalSlide = slidesData.length;
-        let dotsContainer = document.getElementById("dotsContainer");
-        for (let j = 1; j <= totalSlide; j++) {
+        for (let j = 1; j <= slidesData.length; j++) {
             let span = document.createElement("span");
             span.className = "dot";
             span.onclick = function() { currentSlide(j); };
@@ -97,8 +121,10 @@ $images = array_values($images);
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+            if (slides.length > 0) {
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
         }
     </script>
 </body>

@@ -1,0 +1,114 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('pink-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #c2185b;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+select {
+    font-size: 18px;
+    padding: 8px 12px;
+    margin-top: 15px;
+    border: 2px solid #c2185b;
+    border-radius: 6px;
+    background-color: white;
+    color: #c2185b;
+    font-weight: bold;
+}
+
+.slideshow-container {
+    max-width: 800px;
+    margin: 40px auto;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    border-radius: 12px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.mySlides img:hover {
+    transform: scale(1.02);
+}
+
+.numbertext {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.text {
+    color: #444;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: #c2185b;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #c2185b;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.active, .dot:hover {
+    background-color: #f48fb1;
+}
